@@ -9,13 +9,12 @@ function App() {
 
   const count = useSelector((state) => state.counter.count);
   const dispatch = useDispatch();
-  console.log("count", count);
+
   return (
     <div className="app-container">
       <div>
         <h1>Host Application </h1>
         <h2>Store value at host : {count}</h2>
-
         <button onClick={() => dispatch(increment())}>
           increment remote store
         </button>
@@ -24,6 +23,7 @@ function App() {
           increment local state
         </button>
       </div>
+
       <div>
         <h1>Remote Application </h1>
         <h2>Store value at remote : {count}</h2>
